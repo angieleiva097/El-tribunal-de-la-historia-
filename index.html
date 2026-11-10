@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>El Tribunal de la Historia</title>
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20">
 </head>
 
 <body>
@@ -16,82 +14,62 @@
   </header>
 
   <p class="instruccion">
-    Bienvenido al tribunal. Selecciona un icono para consultar los archivos históricos.
+    Bienvenido al tribunal. Selecciona un expediente para investigar y debatir.
   </p>
 
   <main>
-
     <section class="escenario">
 
-      <!-- IMAGEN DEL JUZGADO -->
       <img
-        src="Juzgado.jpeg"
+        src="juzgado.jpeg"
         class="fondo-juzgado"
-        alt="Ilustración del juzgado"
-        onerror="this.onerror=null; this.src='juzgado.jpeg';"
+        alt="Sala de El Tribunal de la Historia"
+        onerror="this.onerror=null;this.src='Juzgado.jpeg';"
       >
 
       <!-- JUEZ: BIBLIOTECA -->
-      <a
-        href="expediente.html?personaje=biblioteca"
-        class="icono juez"
-        title="Biblioteca histórica"
-        aria-label="Abrir biblioteca histórica"
-      >⚖</a>
+      <a class="icono juez"
+         href="expediente.html?personaje=biblioteca"
+         title="Biblioteca histórica"
+         aria-label="Biblioteca histórica">⚖</a>
 
       <!-- SECRETARIO: ARCHIVO -->
-      <a
-        href="expediente.html?personaje=secretaria"
-        class="icono secretario"
-        title="Archivo del secretario"
-        aria-label="Abrir archivo del secretario"
-      >📜</a>
+      <a class="icono secretario"
+         href="expediente.html?personaje=secretaria"
+         title="Archivo del secretario"
+         aria-label="Archivo del secretario">📜</a>
 
       <!-- FISCALÍA LIBERAL -->
+      <a class="icono gaitan"
+         href="expediente.html?personaje=gaitan"
+         title="Jorge Eliécer Gaitán"
+         aria-label="Expediente de Gaitán">📁</a>
 
-      <a
-        href="expediente.html?personaje=gaitan"
-        class="icono gaitan"
-        title="Jorge Eliécer Gaitán"
-        aria-label="Expediente de Jorge Eliécer Gaitán"
-      >📁</a>
+      <a class="icono galan"
+         href="expediente.html?personaje=galan"
+         title="Luis Carlos Galán"
+         aria-label="Expediente de Galán">📁</a>
 
-      <a
-        href="expediente.html?personaje=galan"
-        class="icono galan"
-        title="Luis Carlos Galán"
-        aria-label="Expediente de Luis Carlos Galán"
-      >📁</a>
-
-      <a
-        href="expediente.html?personaje=samper"
-        class="icono samper"
-        title="Ernesto Samper"
-        aria-label="Expediente de Ernesto Samper"
-      >📁</a>
+      <a class="icono samper"
+         href="expediente.html?personaje=samper"
+         title="Ernesto Samper"
+         aria-label="Expediente de Samper">📁</a>
 
       <!-- DEFENSA CONSERVADORA -->
+      <a class="icono misael"
+         href="expediente.html?personaje=misael"
+         title="Misael Pastrana"
+         aria-label="Expediente de Misael Pastrana">📁</a>
 
-      <a
-        href="expediente.html?personaje=misael"
-        class="icono misael"
-        title="Misael Pastrana"
-        aria-label="Expediente de Misael Pastrana"
-      >📁</a>
+      <a class="icono andres"
+         href="expediente.html?personaje=andres"
+         title="Andrés Pastrana"
+         aria-label="Expediente de Andrés Pastrana">📁</a>
 
-      <a
-        href="expediente.html?personaje=andres"
-        class="icono andres"
-        title="Andrés Pastrana"
-        aria-label="Expediente de Andrés Pastrana"
-      >📁</a>
-
-      <a
-        href="expediente.html?personaje=belisario"
-        class="icono belisario"
-        title="Belisario Betancur"
-        aria-label="Expediente de Belisario Betancur"
-      >📁</a>
+      <a class="icono belisario"
+         href="expediente.html?personaje=belisario"
+         title="Belisario Betancur"
+         aria-label="Expediente de Belisario Betancur">📁</a>
 
     </section>
 
@@ -99,11 +77,10 @@
       <span>FISCALÍA LIBERAL</span>
       <span>DEFENSA CONSERVADORA</span>
     </section>
-
   </main>
 
   <footer>
-    <p>EL TRIBUNAL DE LA HISTORIA</p>
+    EL TRIBUNAL DE LA HISTORIA
     <p>Investigar · Cuestionar · Debatir</p>
   </footer>
 
