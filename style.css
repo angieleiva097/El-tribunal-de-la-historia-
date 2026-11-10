@@ -1,49 +1,27 @@
-/* JUEZ: insignia junto a la corbata */
-.pin-juez {
+.juez {
   left: 56%;
-  top: 37%;
+  top: 39%;
 }
 
-/* SECRETARIO: insignia en el pecho */
-.pin-secretario {
+.secretario {
   left: 56%;
-  top: 64%;
+  top: 68%;
 }
 
-/* FISCALÍA LIBERAL: insignias sobre cada participante */
-.pin-gaitan {
+.gaitan {
   left: 13%;
-  top: 57%;
+  top: 53%;
 }
 
-.pin-galan {
+.galan {
   left: 27%;
-  top: 57%;
+  top: 53%;
 }
 
-.pin-samper {
+.samper {
   left: 39%;
-  top: 57%;
+  top: 53%;
 }
-
-/* DEFENSA CONSERVADORA */
-.pin-misael {
-  left: 63%;
-  top: 57%;
-}
-
-.pin-andres {
-  left: 77%;
-  top: 57%;
-}
-
-.pin-belisario {
-  left: 89%;
-  top: 57%;
-}
-
-/* INSIGNIAS PEQUEÑAS */
-.pin-icono {
   width: 17px;
   height: 17px;
   font-size: 9px;
