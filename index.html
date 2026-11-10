@@ -1,13 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Tribunal de la Historia</title>
-  <link rel="stylesheet" href="style.css?v=20">
+  <link rel="stylesheet" href="style.css?v=21">
 </head>
-<script src="script.js"></script>
-<script src="sonidos.js"></script>
 <body>
 
   <header class="cabecera">
@@ -15,11 +14,12 @@
   </header>
 
   <p class="instruccion">
-    Bienvenido al tribunal. Selecciona un expediente para investigar y debatir.
+    Bienvenido al tribunal. Selecciona un expediente
+    para investigar la historia política colombiana.
   </p>
 
   <main>
-    <section class="escenario">
+    <section class="escenario" aria-label="Sala del tribunal">
 
       <img
         src="juzgado.jpeg"
@@ -28,49 +28,43 @@
         onerror="this.onerror=null;this.src='Juzgado.jpeg';"
       >
 
-      <!-- JUEZ: BIBLIOTECA -->
+      <!-- JUEZ -->
       <a class="icono juez"
          href="expediente.html?personaje=biblioteca"
          title="Biblioteca histórica"
-         aria-label="Biblioteca histórica">⚖</a>
+         aria-label="Abrir biblioteca histórica">⚖</a>
 
-      <!-- SECRETARIO: ARCHIVO -->
+      <!-- SECRETARIO -->
       <a class="icono secretario"
          href="expediente.html?personaje=secretaria"
          title="Archivo del secretario"
-         aria-label="Archivo del secretario">📜</a>
+         aria-label="Abrir secretaría">📜</a>
 
       <!-- FISCALÍA LIBERAL -->
       <a class="icono gaitan"
          href="expediente.html?personaje=gaitan"
-         title="Jorge Eliécer Gaitán"
-         aria-label="Expediente de Gaitán">📁</a>
+         title="Jorge Eliécer Gaitán">📁</a>
 
       <a class="icono galan"
          href="expediente.html?personaje=galan"
-         title="Luis Carlos Galán"
-         aria-label="Expediente de Galán">📁</a>
+         title="Luis Carlos Galán">📁</a>
 
       <a class="icono samper"
          href="expediente.html?personaje=samper"
-         title="Ernesto Samper"
-         aria-label="Expediente de Samper">📁</a>
+         title="Ernesto Samper">📁</a>
 
       <!-- DEFENSA CONSERVADORA -->
       <a class="icono misael"
          href="expediente.html?personaje=misael"
-         title="Misael Pastrana"
-         aria-label="Expediente de Misael Pastrana">📁</a>
+         title="Misael Pastrana">📁</a>
 
       <a class="icono andres"
          href="expediente.html?personaje=andres"
-         title="Andrés Pastrana"
-         aria-label="Expediente de Andrés Pastrana">📁</a>
+         title="Andrés Pastrana">📁</a>
 
       <a class="icono belisario"
          href="expediente.html?personaje=belisario"
-         title="Belisario Betancur"
-         aria-label="Expediente de Belisario Betancur">📁</a>
+         title="Belisario Betancur">📁</a>
 
     </section>
 
@@ -85,5 +79,25 @@
     <p>Investigar · Cuestionar · Debatir</p>
   </footer>
 
+  <!-- AUDIO DE LA SALA -->
+  <audio id="musicaTribunal"
+         src="musica-tribunal.mp3"
+         loop preload="none"></audio>
+
+  <audio id="sonidoExpediente"
+         src="expediente.mp3"
+         preload="none"></audio>
+
+  <audio id="sonidoMazo"
+         src="mazo.mp3"
+         preload="none"></audio>
+
+  <button id="botonMusica"
+          type="button"
+          aria-pressed="false">
+    🔊 Activar música
+  </button>
+
+  <script src="sonidos.js"></script>
 </body>
 </html>
