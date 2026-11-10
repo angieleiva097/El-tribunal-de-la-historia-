@@ -2,122 +2,79 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>El Tribunal de la Historia</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
-
 <body>
 
-  <header class="cabecera">
-    <h1>EL TRIBUNAL DE LA HISTORIA</h1>
-    <p>Investigar · Cuestionar · Comprender</p>
-  </header>
+<header class="cabecera">
+  <h1>EL TRIBUNAL DE LA HISTORIA</h1>
+</header>
 
-  <main>
-    <section class="bienvenida">
-      <h2>Bienvenido al recinto histórico</h2>
-      <p>
-        En este tribunal no se juzgan personas:
-        se examinan decisiones, documentos,
-        discursos y acontecimientos de la historia política colombiana.
-      </p>
-      <p>Selecciona un icono para consultar los archivos históricos.</p>
-    </section>
+<main>
+  <p class="instruccion">
+    Selecciona el icono junto a cada representante para consultar su expediente.
+  </p>
 
-    <section class="escenario">
+  <section class="escenario">
 
-      <img
-        class="fondo-juzgado"
-        src="Juzgado.jpeg"
-        alt="Ilustración de la sala de El Tribunal de la Historia"
-      >
+    <img src="Juzgado.jpeg" class="fondo-juzgado"
+         alt="Sala de El Tribunal de la Historia">
 
-      <!-- ACCESO AL JUEZ -->
-      <a class="punto juez"
-         href="expediente.html?personaje=biblioteca"
-         aria-label="Consultar biblioteca histórica"
-         title="Biblioteca histórica">
-        <span>⚖</span>
-        <small>Biblioteca</small>
-      </a>
+    <!-- JUEZ -->
+    <a class="icono juez" href="expediente.html?personaje=biblioteca"
+       target="_blank" aria-label="Biblioteca histórica" title="Biblioteca histórica">
+      ⚖
+    </a>
 
-      <!-- ACCESO AL SECRETARIO -->
-      <a class="punto secretario"
-         href="expediente.html?personaje=secretaria"
-         aria-label="Consultar secretaría"
-         title="Secretaría">
-        <span>📜</span>
-        <small>Secretaría</small>
-      </a>
+    <!-- SECRETARIO -->
+    <a class="icono secretario" href="expediente.html?personaje=secretario"
+       target="_blank" aria-label="Archivo del secretario" title="Archivo documental">
+      📜
+    </a>
 
-      <!-- FISCALÍA: TRES EXPEDIENTES -->
-      <a class="punto personaje p-gaitan"
-         href="expediente.html?personaje=gaitan"
-         title="Jorge Eliécer Gaitán"
-         aria-label="Expediente de Jorge Eliécer Gaitán">
-        <span>📁</span>
-        <small>Gaitán</small>
-      </a>
+    <!-- FISCALÍA LIBERAL -->
+    <a class="icono gaitan" href="expediente.html?personaje=gaitan"
+       target="_blank" title="Jorge Eliécer Gaitán" aria-label="Expediente de Gaitán">
+      📁
+    </a>
 
-      <a class="punto personaje p-galan"
-         href="expediente.html?personaje=galan"
-         title="Luis Carlos Galán"
-         aria-label="Expediente de Luis Carlos Galán">
-        <span>📁</span>
-        <small>Galán</small>
-      </a>
+    <a class="icono galan" href="expediente.html?personaje=galan"
+       target="_blank" title="Luis Carlos Galán" aria-label="Expediente de Galán">
+      📁
+    </a>
 
-      <a class="punto personaje p-samper"
-         href="expediente.html?personaje=samper"
-         title="Ernesto Samper"
-         aria-label="Expediente de Ernesto Samper">
-        <span>📁</span>
-        <small>Samper</small>
-      </a>
+    <a class="icono samper" href="expediente.html?personaje=samper"
+       target="_blank" title="Ernesto Samper" aria-label="Expediente de Samper">
+      📁
+    </a>
 
-      <!-- DEFENSA: TRES EXPEDIENTES -->
-      <a class="punto personaje p-misael"
-         href="expediente.html?personaje=misael"
-         title="Misael Pastrana"
-         aria-label="Expediente de Misael Pastrana">
-        <span>📁</span>
-        <small>M. Pastrana</small>
-      </a>
+    <!-- DEFENSA CONSERVADORA -->
+    <a class="icono misael" href="expediente.html?personaje=misael"
+       target="_blank" title="Misael Pastrana" aria-label="Expediente de Misael Pastrana">
+      📁
+    </a>
 
-      <a class="punto personaje p-andres"
-         href="expediente.html?personaje=andres"
-         title="Andrés Pastrana"
-         aria-label="Expediente de Andrés Pastrana">
-        <span>📁</span>
-        <small>A. Pastrana</small>
-      </a>
+    <a class="icono andres" href="expediente.html?personaje=andres"
+       target="_blank" title="Andrés Pastrana" aria-label="Expediente de Andrés Pastrana">
+      📁
+    </a>
 
-      <a class="punto personaje p-belisario"
-         href="expediente.html?personaje=belisario"
-         title="Belisario Betancur"
-         aria-label="Expediente de Belisario Betancur">
-        <span>📁</span>
-        <small>Betancur</small>
-      </a>
+    <a class="icono belisario" href="expediente.html?personaje=belisario"
+       target="_blank" title="Belisario Betancur" aria-label="Expediente de Belisario Betancur">
+      📁
+    </a>
 
-    </section>
+  </section>
 
-    <section class="ayuda">
-      <p>
-        Cada icono abre un espacio independiente de consulta.
-        Explora los expedientes y conoce las fuentes históricas.
-      </p>
-    </section>
+  <div class="leyenda">
+    <span>FISCALÍA LIBERAL</span>
+    <span>DEFENSA CONSERVADORA</span>
+  </div>
+</main>
 
-  </main>
-
-  <footer>
-    EL TRIBUNAL DE LA HISTORIA
-    <span>Memoria · Investigación · Historia política colombiana</span>
-  </footer>
-
-  <script src="script.js?v=3"></script>
+<footer>EL TRIBUNAL DE LA HISTORIA</footer>
 
 </body>
 </html>
