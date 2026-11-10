@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expediente histórico</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Archivo | El Tribunal de la Historia</title>
+  <link rel="stylesheet" href="style.css?v=21">
 </head>
+
 <body class="pagina-expediente">
 
   <header class="cabecera">
@@ -13,11 +15,41 @@
     <p>Archivo documental y memoria política</p>
   </header>
 
-  <main class="contenedor-expediente" id="detalleExpediente">
-    <p>Abriendo expediente...</p>
-    <a class="volver" href="index.html">← Volver al juzgado</a>
+  <nav class="barra-archivo">
+    <a class="volver" href="index.html">
+      ← Volver al juzgado
+    </a>
+
+    <button id="botonMusica"
+            type="button"
+            aria-pressed="false">
+      🔊 Activar música
+    </button>
+  </nav>
+
+  <main class="contenedor-expediente"
+        id="detalleExpediente">
+    <p>Preparando archivo histórico...</p>
   </main>
 
+  <!-- AUDIO DE PÁGINAS INTERIORES -->
+  <audio id="musicaTribunal"
+         loop preload="none"></audio>
+
+  <audio id="sonidoExpediente"
+         src="expediente.mp3"
+         preload="none"></audio>
+
+  <audio id="sonidoMazo"
+         src="mazo.mp3"
+         preload="none"></audio>
+
+  <audio id="sonidoPagina"
+         src="pagina.mp3"
+         preload="none"></audio>
+
   <script src="script.js"></script>
+  <script src="sonidos.js"></script>
+
 </body>
 </html>
