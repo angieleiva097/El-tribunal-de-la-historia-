@@ -1,31 +1,40 @@
+/* RECUPERAR Y UBICAR LOS ICONOS DE LAS BANCADAS */
+.escenario .punto.personaje {
+  position: absolute;
+  z-index: 30;
+  width: 25px;
+  height: 25px;
+  transform: translate(-50%, -50%);
+}
+
 /* FISCALÍA LIBERAL */
-.gaitan {
+.escenario .punto.p-gaitan {
   left: 13%;
-  top: 78%;
+  top: 65%;
 }
 
-.galan {
+.escenario .punto.p-galan {
   left: 25%;
-  top: 78%;
+  top: 65%;
 }
 
-.samper {
+.escenario .punto.p-samper {
   left: 34%;
-  top: 78%;
+  top: 65%;
 }
 
 /* DEFENSA CONSERVADORA */
-.misael {
+.escenario .punto.p-misael {
   left: 70%;
-  top: 78%;
+  top: 65%;
 }
 
-.andres {
+.escenario .punto.p-andres {
   left: 79%;
-  top: 78%;
+  top: 65%;
 }
 
-.belisario {
+.escenario .punto.p-belisario {
   left: 88%;
-  top: 78%;
+  top: 65%;
 }
