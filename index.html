@@ -8,62 +8,84 @@
 </head>
 <body>
 
-  <header class="encabezado">
+  <header class="cabecera">
     <h1>EL TRIBUNAL DE LA HISTORIA</h1>
-    <p>Un espacio para investigar, consultar y comprender la historia política colombiana.</p>
+    <p>Un recorrido por la memoria política colombiana</p>
   </header>
 
   <main>
-    <section class="bienvenida">
-      <h2>Bienvenido al recinto histórico</h2>
-      <p>
-        En este tribunal no se juzgan personas: se examinan decisiones,
-        documentos, discursos y acontecimientos que marcaron la historia
-        política de Colombia.
-      </p>
-      <p>Selecciona un personaje del juzgado para consultar sus expedientes.</p>
+    <section class="introduccion">
+      <p>Bienvenido al tribunal. Selecciona un personaje o consulta la biblioteca histórica.</p>
     </section>
 
-    <section class="tribunal">
-      <div class="columnas">
-        <div class="columna"></div>
-        <div class="columna"></div>
-        <div class="columna"></div>
-      </div>
+    <section class="escenario" aria-label="Sala del Tribunal de la Historia">
 
-      <div class="juez">
-        <div class="retrato">⚖️</div>
-        <h3>EL JUEZ</h3>
-        <p>Biblioteca histórica</p>
-        <button class="personaje" data-role="todos">Consultar archivos</button>
-      </div>
+      <img class="fondo-juzgado"
+           src="Juzgado.jpeg"
+           alt="Sala ilustrada de El Tribunal de la Historia">
 
-      <div class="bancadas">
-        <div class="bancada liberal">
-          <h3>FISCALÍA · LIBERAL</h3>
-          <button class="personaje" data-role="gaitan">Jorge Eliécer Gaitán</button>
-          <button class="personaje" data-role="galan">Luis Carlos Galán</button>
-          <button class="personaje" data-role="samper">Ernesto Samper</button>
-        </div>
+      <a class="punto juez"
+         href="expediente.html?personaje=biblioteca"
+         aria-label="Abrir biblioteca histórica"
+         title="Biblioteca histórica">
+        <span>⚖</span>
+        <small>Biblioteca</small>
+      </a>
 
-        <div class="bancada conservadora">
-          <h3>DEFENSA · CONSERVADORA</h3>
-          <button class="personaje" data-role="misael">Misael Pastrana</button>
-          <button class="personaje" data-role="andres">Andrés Pastrana</button>
-          <button class="personaje" data-role="belisario">Belisario Betancur</button>
-        </div>
-      </div>
+      <a class="punto secretario"
+         href="expediente.html?personaje=secretaria"
+         aria-label="Abrir secretaría"
+         title="Secretaría">
+        <span>📜</span>
+        <small>Secretaría</small>
+      </a>
+
+      <a class="punto personaje p-gaitan"
+         href="expediente.html?personaje=gaitan"
+         title="Jorge Eliécer Gaitán">
+        <span>📁</span><small>Gaitán</small>
+      </a>
+
+      <a class="punto personaje p-galan"
+         href="expediente.html?personaje=galan"
+         title="Luis Carlos Galán">
+        <span>📁</span><small>Galán</small>
+      </a>
+
+      <a class="punto personaje p-samper"
+         href="expediente.html?personaje=samper"
+         title="Ernesto Samper">
+        <span>📁</span><small>Samper</small>
+      </a>
+
+      <a class="punto personaje p-misael"
+         href="expediente.html?personaje=misael"
+         title="Misael Pastrana">
+        <span>📁</span><small>M. Pastrana</small>
+      </a>
+
+      <a class="punto personaje p-andres"
+         href="expediente.html?personaje=andres"
+         title="Andrés Pastrana">
+        <span>📁</span><small>A. Pastrana</small>
+      </a>
+
+      <a class="punto personaje p-belisario"
+         href="expediente.html?personaje=belisario"
+         title="Belisario Betancur">
+        <span>📁</span><small>Betancur</small>
+      </a>
+
     </section>
 
-    <section id="archivos" class="archivos">
-      <h2>ARCHIVO HISTÓRICO</h2>
-      <p id="mensaje">Selecciona un personaje para abrir sus expedientes.</p>
-      <div id="contenidoArchivos"></div>
+    <section class="instrucciones">
+      <h2>¿Cómo recorrer el tribunal?</h2>
+      <p>Selecciona los iconos dorados para entrar a la biblioteca, consultar la secretaría o abrir los expedientes históricos.</p>
     </section>
   </main>
 
   <footer>
-    <p>EL TRIBUNAL DE LA HISTORIA · Investigación y memoria política colombiana</p>
+    EL TRIBUNAL DE LA HISTORIA · Memoria, investigación y pensamiento crítico
   </footer>
 
   <script src="script.js"></script>
