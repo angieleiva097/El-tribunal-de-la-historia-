@@ -1,69 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Crimson+Text:wght@400;600;700&display=swap');
-
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background: #100b08;
-  color: #f4e8d0;
-  font-family: 'Crimson Text', Georgia, serif;
+  background: #140d09;
+  color: #f4e5c5;
+  font-family: Georgia, serif;
 }
-
-/* ENCABEZADO */
 
 .cabecera {
   text-align: center;
-  padding: 22px 12px;
-  background: linear-gradient(#28180f, #100b08);
-  border-bottom: 2px solid #b58b4d;
+  padding: 20px 10px;
+  background: #21140e;
+  border-bottom: 2px solid #b18a4d;
 }
 
 .cabecera h1 {
   margin: 0;
-  color: #d9b66d;
-  font-family: 'Cinzel', Georgia, serif;
-  font-size: clamp(23px, 4vw, 42px);
+  color: #dfbd7c;
+  font-family: Georgia, serif;
   letter-spacing: 3px;
+  font-size: clamp(22px, 4vw, 40px);
 }
 
-.cabecera p {
-  margin: 8px 0 0;
-  font-size: 18px;
-  color: #e6d3b2;
-}
-
-/* BIENVENIDA */
-
-.bienvenida {
-  max-width: 900px;
-  margin: auto;
-  padding: 15px 20px;
+.instruccion {
   text-align: center;
+  padding: 8px;
 }
-
-.bienvenida h2 {
-  color: #d9b66d;
-  font-family: 'Cinzel', Georgia, serif;
-}
-
-.bienvenida p {
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-/* SALA DEL TRIBUNAL */
 
 .escenario {
   position: relative;
   width: min(1250px, 96%);
+  margin: 15px auto;
   aspect-ratio: 1648 / 896;
-  margin: 15px auto 30px;
   overflow: hidden;
-  border: 3px solid #a98043;
-  background: #21140e;
-  box-shadow: 0 15px 45px rgba(0,0,0,.8);
+  border: 3px solid #a98148;
+  box-shadow: 0 10px 35px #000;
 }
 
 .fondo-juzgado {
@@ -71,160 +44,120 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: fill;
   display: block;
+  object-fit: fill;
 }
 
-/* ICONOS INTERACTIVOS */
+/* ICONOS PEQUEÑOS Y FLOTANTES */
 
-.punto {
+.icono {
   position: absolute;
-  z-index: 5;
+  z-index: 10;
+  width: clamp(22px, 2.5vw, 30px);
+  height: clamp(22px, 2.5vw, 30px);
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  width: clamp(25px, 2.7vw, 34px);
-  height: clamp(25px, 2.7vw, 34px);
-
-  border: 1.5px solid #e4c47c;
+  justify-content: center;
+  border: 1px solid #f0cf88;
   border-radius: 50%;
-
-  color: #f8dfaa;
-  background: rgba(42, 27, 14, .94);
-
-  box-shadow: 0 2px 8px rgba(0,0,0,.7);
+  background: rgba(39, 25, 12, .94);
+  color: #ffe1a1;
+  font-size: clamp(11px, 1.3vw, 15px);
   text-decoration: none;
-
-  transition: transform .25s ease,
-              background .25s ease,
-              box-shadow .25s ease;
+  box-shadow: 0 2px 8px #000;
+  transform: translate(-50%, -50%);
+  animation: flotar 3s ease-in-out infinite;
+  transition: background .2s, box-shadow .2s;
 }
 
-.punto span {
-  font-size: 15px;
-  line-height: 1;
+.icono:hover,
+.icono:focus-visible {
+  background: #a77b3d;
+  box-shadow: 0 0 13px #f0c875;
+  outline: 2px solid #f5dfb4;
+  transform: translate(-50%, -50%) scale(1.18);
 }
 
-.punto small {
-  position: absolute;
-  top: calc(100% + 5px);
-  padding: 3px 6px;
-  border-radius: 3px;
-  background: rgba(20, 12, 7, .96);
-  color: #fff0ce;
-  font-size: 10px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .2s;
-}
+/*
+  POSICIONES EN PORCENTAJE:
+  left = posición horizontal
+  top = posición vertical
 
-.punto:hover,
-.punto:focus-visible {
-  transform: scale(1.15);
-  background: #9c7138;
-  box-shadow: 0 0 14px #e3bd72;
-  outline: 2px solid #f4dfad;
-}
+  Ajustaremos estas coordenadas mirando tu ilustración.
+*/
 
-.punto:hover small,
-.punto:focus-visible small {
-  opacity: 1;
-}
-
-/* JUEZ: AL LADO DE SU CUERPO, NO SOBRE SU CARA */
-
+/* JUEZ: junto al hombro, a un costado */
 .juez {
-  left: 57%;
-  top: 43%;
+  left: 56%;
+  top: 39%;
 }
 
-/* SECRETARIO: JUNTO A LA PERSONA SENTADA DE ESPALDAS */
-
+/* SECRETARIO: junto al hombro del hombre sentado de espaldas */
 .secretario {
-  left: 57%;
-  top: 65%;
+  left: 56%;
+  top: 68%;
 }
 
-/* FISCALÍA: ICONOS JUNTO A LOS TRES PERSONAJES */
-
-.p-gaitan {
+/* TRES REPRESENTANTES DEL LADO IZQUIERDO */
+.gaitan {
   left: 13%;
   top: 53%;
 }
 
-.p-galan {
+.galan {
   left: 27%;
   top: 53%;
 }
 
-.p-samper {
+.samper {
   left: 39%;
   top: 53%;
 }
 
-/* DEFENSA: ICONOS JUNTO A LOS TRES PERSONAJES */
-
-.p-misael {
-  left: 64%;
+/* TRES REPRESENTANTES DEL LADO DERECHO */
+.misael {
+  left: 63%;
   top: 53%;
 }
 
-.p-andres {
+.andres {
   left: 77%;
   top: 53%;
 }
 
-.p-belisario {
-  left: 90%;
+.belisario {
+  left: 89%;
   top: 53%;
 }
 
-/* ANIMACIÓN SUAVE */
-
-.punto {
-  animation: brillo 3s ease-in-out infinite;
-}
-
-@keyframes brillo {
+@keyframes flotar {
   0%, 100% {
-    box-shadow: 0 2px 8px rgba(0,0,0,.7);
+    margin-top: 0;
   }
-
   50% {
-    box-shadow: 0 0 11px rgba(220,180,100,.7);
+    margin-top: -4px;
   }
 }
 
-/* TEXTO INFERIOR */
-
-.ayuda {
-  max-width: 850px;
+.leyenda {
+  width: min(1000px, 95%);
   margin: 20px auto;
-  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
   text-align: center;
-  font-size: 18px;
-  color: #dfcba7;
-}
-
-footer {
-  padding: 20px;
-  text-align: center;
-  color: #d9b66d;
-  background: #080605;
-  border-top: 1px solid #8d6836;
+  color: #dfbd7c;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
-footer span {
-  display: block;
-  margin-top: 6px;
-  color: #c6b18e;
-  font-size: 14px;
+footer {
+  padding: 18px;
+  text-align: center;
+  background: #080605;
+  color: #d9b66d;
+  border-top: 1px solid #8d6836;
 }
-
-/* ADAPTACIÓN A MÓVILES */
 
 @media (max-width: 650px) {
   .escenario {
@@ -233,13 +166,19 @@ footer span {
     border-right: 0;
   }
 
-  .punto small {
-    display: none;
+  .icono {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+  }
+
+  .leyenda {
+    font-size: 12px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .punto {
+  .icono {
     animation: none;
   }
 }
