@@ -2,9 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>El Tribunal de la Historia</title>
-  <link rel="stylesheet" href="style.css?v=11">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,117 +15,96 @@
     <h1>EL TRIBUNAL DE LA HISTORIA</h1>
   </header>
 
-  <main>
+  <p class="instruccion">
+    Bienvenido al tribunal. Selecciona un icono para consultar los archivos históricos.
+  </p>
 
-    <p class="instruccion">
-      Selecciona el icono junto a cada representante para consultar su expediente.
-    </p>
+  <main>
 
     <section class="escenario">
 
+      <!-- IMAGEN DEL JUZGADO -->
       <img
         src="Juzgado.jpeg"
         class="fondo-juzgado"
-        alt="Sala de El Tribunal de la Historia"
+        alt="Ilustración del juzgado"
+        onerror="this.onerror=null; this.src='juzgado.jpeg';"
       >
 
-      <!-- JUEZ: BIBLIOTECA HISTÓRICA -->
+      <!-- JUEZ: BIBLIOTECA -->
       <a
-        class="icono juez"
         href="expediente.html?personaje=biblioteca"
-        target="_blank"
-        aria-label="Biblioteca histórica"
+        class="icono juez"
         title="Biblioteca histórica"
-      >
-        ⚖
-      </a>
+        aria-label="Abrir biblioteca histórica"
+      >⚖</a>
 
-      <!-- SECRETARIO: ARCHIVO DOCUMENTAL -->
+      <!-- SECRETARIO: ARCHIVO -->
       <a
+        href="expediente.html?personaje=secretaria"
         class="icono secretario"
-        href="expediente.html?personaje=secretario"
-        target="_blank"
-        aria-label="Archivo del secretario"
-        title="Archivo documental"
-      >
-        📜
-      </a>
+        title="Archivo del secretario"
+        aria-label="Abrir archivo del secretario"
+      >📜</a>
 
       <!-- FISCALÍA LIBERAL -->
 
       <a
-        class="icono gaitan"
         href="expediente.html?personaje=gaitan"
-        target="_blank"
+        class="icono gaitan"
         title="Jorge Eliécer Gaitán"
-        aria-label="Expediente de Gaitán"
-      >
-        📁
-      </a>
+        aria-label="Expediente de Jorge Eliécer Gaitán"
+      >📁</a>
 
       <a
-        class="icono galan"
         href="expediente.html?personaje=galan"
-        target="_blank"
+        class="icono galan"
         title="Luis Carlos Galán"
-        aria-label="Expediente de Galán"
-      >
-        📁
-      </a>
+        aria-label="Expediente de Luis Carlos Galán"
+      >📁</a>
 
       <a
-        class="icono samper"
         href="expediente.html?personaje=samper"
-        target="_blank"
+        class="icono samper"
         title="Ernesto Samper"
-        aria-label="Expediente de Samper"
-      >
-        📁
-      </a>
+        aria-label="Expediente de Ernesto Samper"
+      >📁</a>
 
       <!-- DEFENSA CONSERVADORA -->
 
       <a
-        class="icono misael"
         href="expediente.html?personaje=misael"
-        target="_blank"
+        class="icono misael"
         title="Misael Pastrana"
         aria-label="Expediente de Misael Pastrana"
-      >
-        📁
-      </a>
+      >📁</a>
 
       <a
-        class="icono andres"
         href="expediente.html?personaje=andres"
-        target="_blank"
+        class="icono andres"
         title="Andrés Pastrana"
         aria-label="Expediente de Andrés Pastrana"
-      >
-        📁
-      </a>
+      >📁</a>
 
       <a
-        class="icono belisario"
         href="expediente.html?personaje=belisario"
-        target="_blank"
+        class="icono belisario"
         title="Belisario Betancur"
         aria-label="Expediente de Belisario Betancur"
-      >
-        📁
-      </a>
+      >📁</a>
 
     </section>
 
-    <div class="leyenda">
+    <section class="leyenda">
       <span>FISCALÍA LIBERAL</span>
       <span>DEFENSA CONSERVADORA</span>
-    </div>
+    </section>
 
   </main>
 
   <footer>
-    EL TRIBUNAL DE LA HISTORIA
+    <p>EL TRIBUNAL DE LA HISTORIA</p>
+    <p>Investigar · Cuestionar · Debatir</p>
   </footer>
 
 </body>
