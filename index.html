@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Tribunal de la Historia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <h1>EL TRIBUNAL DE LA HISTORIA</h1>
+    <p>Un espacio para investigar, consultar y comprender la historia política colombiana.</p>
+  </header>
+
+  <main>
+    <section class="bienvenida">
+      <h2>Bienvenido al recinto histórico</h2>
+      <p>
+        En este tribunal no se juzgan personas: se examinan decisiones,
+        documentos, discursos y acontecimientos que marcaron la historia
+        política de Colombia.
+      </p>
+      <p>Selecciona un personaje del juzgado para consultar sus expedientes.</p>
+    </section>
+
+    <section class="tribunal">
+      <div class="columnas">
+        <div class="columna"></div>
+        <div class="columna"></div>
+        <div class="columna"></div>
+      </div>
+
+      <div class="juez">
+        <div class="retrato">⚖️</div>
+        <h3>EL JUEZ</h3>
+        <p>Biblioteca histórica</p>
+        <button class="personaje" data-role="todos">Consultar archivos</button>
+      </div>
+
+      <div class="bancadas">
+        <div class="bancada liberal">
+          <h3>FISCALÍA · LIBERAL</h3>
+          <button class="personaje" data-role="gaitan">Jorge Eliécer Gaitán</button>
+          <button class="personaje" data-role="galan">Luis Carlos Galán</button>
+          <button class="personaje" data-role="samper">Ernesto Samper</button>
+        </div>
+
+        <div class="bancada conservadora">
+          <h3>DEFENSA · CONSERVADORA</h3>
+          <button class="personaje" data-role="misael">Misael Pastrana</button>
+          <button class="personaje" data-role="andres">Andrés Pastrana</button>
+          <button class="personaje" data-role="belisario">Belisario Betancur</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="archivos" class="archivos">
+      <h2>ARCHIVO HISTÓRICO</h2>
+      <p id="mensaje">Selecciona un personaje para abrir sus expedientes.</p>
+      <div id="contenidoArchivos"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>EL TRIBUNAL DE LA HISTORIA · Investigación y memoria política colombiana</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
