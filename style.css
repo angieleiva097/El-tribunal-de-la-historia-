@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -15,7 +16,8 @@ body {
   overflow-x: hidden;
 }
 
-/* ESCENARIO: UNA SOLA PANTALLA */
+/* ===== JUZGADO PRINCIPAL ===== */
+
 .escenario {
   position: relative;
   width: 100%;
@@ -25,14 +27,12 @@ body {
   line-height: 0;
 }
 
-/* IMAGEN SIN RECORTAR */
 .fondo-juzgado {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* ICONOS PEQUEÑOS */
 .icono {
   position: absolute;
   display: flex;
@@ -56,59 +56,50 @@ body {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
-/* JUEZ: CENTRO */
+/* POSICIONES ORIGINALES */
+
 .juez {
   left: 54%;
   top: 42%;
 }
 
-/* SECRETARIO: CENTRO */
 .secretario {
   left: 54%;
   top: 65%;
 }
 
-/* FISCALIA LIBERAL */
-
-/* Gaitan */
 .gaitan {
   left: 11.5%;
   top: 60%;
 }
 
-/* Galan */
 .galan {
   left: 25%;
   top: 60%;
 }
 
-/* Samper */
 .samper {
   left: 34%;
   top: 60%;
 }
 
-/* DEFENSA CONSERVADORA */
-
-/* Misael Pastrana */
 .misael {
   left: 77%;
   top: 57%;
 }
 
-/* Andres Pastrana */
 .andres {
   left: 85%;
   top: 57%;
 }
 
-/* Belisario Betancur */
 .belisario {
   left: 93%;
   top: 57%;
 }
 
 /* CABECERA */
+
 .cabecera {
   text-align: center;
   padding: 8px;
@@ -121,14 +112,12 @@ body {
   color: #dfbd7c;
 }
 
-/* INSTRUCCION */
 .instruccion {
   text-align: center;
   font-size: 13px;
   margin: 5px;
 }
 
-/* LEYENDA */
 .leyenda {
   display: flex;
   justify-content: space-around;
@@ -137,7 +126,6 @@ body {
   font-size: 12px;
 }
 
-/* PIE DE PAGINA */
 footer {
   text-align: center;
   padding: 8px;
@@ -147,22 +135,19 @@ footer {
 footer p {
   margin: 4px 0;
 }
-/* BOTON DE MUSICA AMBIENTAL */
+
+/* ===== BOTÓN DE MÚSICA ===== */
 
 #botonMusica {
   position: fixed;
   top: 12px;
   right: 12px;
   z-index: 9999;
-
   padding: 9px 13px;
-
   background: rgba(33, 20, 14, 0.95);
   color: #dfbd7c;
-
   border: 1px solid #b18a4d;
   border-radius: 8px;
-
   font-family: Georgia, serif;
   font-size: 13px;
   cursor: pointer;
@@ -177,13 +162,307 @@ footer p {
   outline-offset: 2px;
 }
 
-/* BOTON EN CELULARES */
-
 @media (max-width: 600px) {
   #botonMusica {
     top: 8px;
     right: 8px;
     padding: 7px 9px;
     font-size: 11px;
+  }
+}
+
+/* ===== PÁGINAS INTERIORES ===== */
+
+.pagina-expediente {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      ellipse at top,
+      #4a3020 0%,
+      #21150e 45%,
+      #100b08 100%
+    );
+}
+
+.pagina-expediente .cabecera {
+  padding: 22px 90px 18px 20px;
+  border-bottom: 2px solid #b18a4d;
+}
+
+.pagina-expediente .cabecera p {
+  color: #c7a77a;
+  font-size: 13px;
+}
+
+.barra-archivo {
+  max-width: 1120px;
+  margin: auto;
+  padding: 18px 20px;
+}
+
+.volver {
+  display: inline-block;
+  color: #e5c28a;
+  text-decoration: none;
+  border: 1px solid #8e6d42;
+  border-radius: 6px;
+  padding: 10px 15px;
+  background: #24170f;
+}
+
+.volver:hover {
+  background: #4a3020;
+}
+
+.contenedor-expediente {
+  width: min(1120px, 94%);
+  margin: 15px auto 70px;
+}
+
+.portada-archivo {
+  text-align: center;
+  padding: 35px 20px;
+  border: 2px solid #ae874f;
+  border-radius: 10px;
+  background:
+    linear-gradient(
+      145deg,
+      #422a1b,
+      #20140d
+    );
+  box-shadow: 0 12px 35px #0008;
+}
+
+.portada-archivo h1 {
+  color: #eac78b;
+  font-size: clamp(26px, 4vw, 43px);
+  margin: 8px 0;
+}
+
+.portada-archivo h2 {
+  font-size: 17px;
+  font-weight: normal;
+  color: #c9aa7b;
+}
+
+.portada-archivo p {
+  max-width: 720px;
+  margin: 18px auto 0;
+  line-height: 1.7;
+}
+
+.sello {
+  font-size: 45px;
+}
+
+.rotulo-seccion {
+  margin: 35px 0 20px;
+  color: #eac78b;
+  text-align: center;
+}
+
+/* CARPETAS Y LIBROS */
+
+.estanteria {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.carpeta {
+  min-height: 220px;
+  border: 2px solid #b99258;
+  border-radius: 8px 16px 16px 8px;
+  background:
+    linear-gradient(
+      130deg,
+      #b78b4d,
+      #8b5a2b 55%,
+      #5a351c
+    );
+  color: #25170d;
+  padding: 22px;
+  text-align: center;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  box-shadow: 5px 8px 0 #100a07;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.carpeta:hover,
+.carpeta:focus-visible {
+  transform: translateY(-7px);
+  box-shadow: 5px 15px 20px #0009;
+}
+
+.carpeta .simbolo {
+  display: block;
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.carpeta strong {
+  display: block;
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.carpeta small {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.carpeta.libro {
+  background:
+    linear-gradient(
+      100deg,
+      #291b13 0%,
+      #57321f 15%,
+      #713d29 100%
+    );
+  color: #f3d8a5;
+}
+
+/* HOJAS DEL EXPEDIENTE */
+
+.visor-documento {
+  margin-top: 28px;
+  padding: 15px;
+  border: 2px solid #a37c4b;
+  border-radius: 8px;
+  background: #25170f;
+}
+
+.hoja-expediente {
+  position: relative;
+  min-height: 370px;
+  max-width: 760px;
+  margin: auto;
+  padding: clamp(25px, 5vw, 65px);
+  background: #ead9b5;
+  color: #352619;
+  box-shadow:
+    inset 0 0 45px #a67f4b55,
+    6px 7px 18px #0008;
+  line-height: 1.85;
+  animation: aparecerHoja 0.3s ease;
+}
+
+.hoja-expediente::before {
+  content: "ARCHIVO HISTÓRICO";
+  display: block;
+  border-bottom: 2px solid #8a6842;
+  font-size: 11px;
+  letter-spacing: 3px;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.hoja-expediente h2 {
+  color: #633d23;
+  font-size: clamp(21px, 3vw, 29px);
+}
+
+.hoja-expediente p {
+  white-space: pre-line;
+}
+
+@keyframes aparecerHoja {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.controles-paginas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.boton-archivo {
+  background: #654026;
+  border: 1px solid #d1a76a;
+  color: #fff0d0;
+  border-radius: 6px;
+  padding: 11px 16px;
+  font-family: Georgia, serif;
+  cursor: pointer;
+}
+
+.boton-archivo:hover {
+  background: #85542f;
+}
+
+.boton-archivo:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.contador-paginas {
+  color: #e6c78f;
+}
+
+.enlace-documento {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #633d23;
+  color: #fff0d0;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.nota-fuente {
+  font-size: 13px;
+  color: #705138;
+}
+
+/* SECRETARÍA */
+
+.indice-personajes {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.ficha-personaje {
+  padding: 20px;
+  background: #302015;
+  border: 1px solid #a6814d;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ficha-personaje a {
+  color: #e9c58b;
+}
+
+.ficha-personaje img {
+  width: 100%;
+  max-width: 140px;
+  height: 160px;
+  object-fit: cover;
+  border: 2px solid #a6814d;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carpeta,
+  .hoja-expediente {
+    animation: none;
+    transition: none;
   }
 }
