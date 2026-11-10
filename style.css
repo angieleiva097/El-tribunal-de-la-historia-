@@ -53,7 +53,7 @@ body {
   line-height: 1.5;
 }
 
-/* ESCENARIO DEL JUZGADO */
+/* SALA DEL TRIBUNAL */
 
 .escenario {
   position: relative;
@@ -83,21 +83,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: clamp(27px, 3vw, 38px);
-  height: clamp(27px, 3vw, 38px);
+
+  width: clamp(25px, 2.7vw, 34px);
+  height: clamp(25px, 2.7vw, 34px);
+
   border: 1.5px solid #e4c47c;
   border-radius: 50%;
+
   color: #f8dfaa;
-  background: rgba(42, 27, 14, .92);
+  background: rgba(42, 27, 14, .94);
+
   box-shadow: 0 2px 8px rgba(0,0,0,.7);
   text-decoration: none;
-  transition: transform .25s ease, background .25s ease,
+
+  transition: transform .25s ease,
+              background .25s ease,
               box-shadow .25s ease;
-  animation: respirar 3.5s ease-in-out infinite;
 }
 
 .punto span {
-  font-size: clamp(12px, 1.6vw, 17px);
+  font-size: 15px;
   line-height: 1;
 }
 
@@ -106,7 +111,7 @@ body {
   top: calc(100% + 5px);
   padding: 3px 6px;
   border-radius: 3px;
-  background: rgba(20, 12, 7, .95);
+  background: rgba(20, 12, 7, .96);
   color: #fff0ce;
   font-size: 10px;
   white-space: nowrap;
@@ -117,7 +122,7 @@ body {
 
 .punto:hover,
 .punto:focus-visible {
-  transform: scale(1.16);
+  transform: scale(1.15);
   background: #9c7138;
   box-shadow: 0 0 14px #e3bd72;
   outline: 2px solid #f4dfad;
@@ -128,75 +133,67 @@ body {
   opacity: 1;
 }
 
-/* UBICACIÓN DEL JUEZ */
+/* JUEZ: AL LADO DE SU CUERPO, NO SOBRE SU CARA */
 
 .juez {
-  left: 50%;
-  top: 34%;
-  transform: translateX(-50%);
+  left: 57%;
+  top: 43%;
 }
 
-.juez:hover,
-.juez:focus-visible {
-  transform: translateX(-50%) scale(1.16);
-}
-
-/* UBICACIÓN DEL SECRETARIO */
+/* SECRETARIO: JUNTO A LA PERSONA SENTADA DE ESPALDAS */
 
 .secretario {
-  left: 50%;
-  top: 76%;
-  transform: translateX(-50%);
+  left: 57%;
+  top: 65%;
 }
 
-.secretario:hover,
-.secretario:focus-visible {
-  transform: translateX(-50%) scale(1.16);
-}
-
-/* FISCALÍA: ICONOS EN LA PARTE BAJA DE LA MESA */
+/* FISCALÍA: ICONOS JUNTO A LOS TRES PERSONAJES */
 
 .p-gaitan {
-  left: 12%;
-  top: 72%;
+  left: 13%;
+  top: 53%;
 }
 
 .p-galan {
   left: 27%;
-  top: 72%;
+  top: 53%;
 }
 
 .p-samper {
   left: 39%;
-  top: 72%;
+  top: 53%;
 }
 
-/* DEFENSA: ICONOS EN LA PARTE BAJA DE LA MESA */
+/* DEFENSA: ICONOS JUNTO A LOS TRES PERSONAJES */
 
 .p-misael {
-  left: 61%;
-  top: 72%;
+  left: 64%;
+  top: 53%;
 }
 
 .p-andres {
-  left: 73%;
-  top: 72%;
+  left: 77%;
+  top: 53%;
 }
 
 .p-belisario {
-  left: 88%;
-  top: 72%;
+  left: 90%;
+  top: 53%;
 }
 
-/* MOVIMIENTO SUAVE */
+/* ANIMACIÓN SUAVE */
 
-@keyframes respirar {
+.punto {
+  animation: brillo 3s ease-in-out infinite;
+}
+
+@keyframes brillo {
   0%, 100% {
     box-shadow: 0 2px 8px rgba(0,0,0,.7);
   }
 
   50% {
-    box-shadow: 0 0 12px rgba(220,180,100,.6);
+    box-shadow: 0 0 11px rgba(220,180,100,.7);
   }
 }
 
@@ -227,7 +224,7 @@ footer span {
   font-size: 14px;
 }
 
-/* PANTALLAS PEQUEÑAS */
+/* ADAPTACIÓN A MÓVILES */
 
 @media (max-width: 650px) {
   .escenario {
