@@ -1,184 +1,65 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background: #140d09;
-  color: #f4e5c5;
-  font-family: Georgia, serif;
-}
-
-.cabecera {
-  text-align: center;
-  padding: 20px 10px;
-  background: #21140e;
-  border-bottom: 2px solid #b18a4d;
-}
-
-.cabecera h1 {
-  margin: 0;
-  color: #dfbd7c;
-  font-family: Georgia, serif;
-  letter-spacing: 3px;
-  font-size: clamp(22px, 4vw, 40px);
-}
-
-.instruccion {
-  text-align: center;
-  padding: 8px;
-}
-
-.escenario {
-  position: relative;
-  width: min(1250px, 96%);
-  margin: 15px auto;
-  aspect-ratio: 1648 / 896;
-  overflow: hidden;
-  border: 3px solid #a98148;
-  box-shadow: 0 10px 35px #000;
-}
-
-.fondo-juzgado {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: fill;
-}
-
-/* ICONOS PEQUEÑOS Y FLOTANTES */
-
+/* POSICIÓN CORREGIDA DE LOS ICONOS */
 .icono {
   position: absolute;
-  z-index: 10;
-  width: clamp(22px, 2.5vw, 30px);
-  height: clamp(22px, 2.5vw, 30px);
+  width: 34px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #f0cf88;
-  border-radius: 50%;
-  background: rgba(39, 25, 12, .94);
-  color: #ffe1a1;
-  font-size: clamp(11px, 1.3vw, 15px);
-  text-decoration: none;
-  box-shadow: 0 2px 8px #000;
   transform: translate(-50%, -50%);
-  animation: flotar 3s ease-in-out infinite;
-  transition: background .2s, box-shadow .2s;
+  z-index: 20;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.icono:hover,
-.icono:focus-visible {
-  background: #a77b3d;
-  box-shadow: 0 0 13px #f0c875;
-  outline: 2px solid #f5dfb4;
-  transform: translate(-50%, -50%) scale(1.18);
-}
-
-/*
-  POSICIONES EN PORCENTAJE:
-  left = posición horizontal
-  top = posición vertical
-
-  Ajustaremos estas coordenadas mirando tu ilustración.
-*/
-
-/* JUEZ: junto al hombro, a un costado */
+/* JUEZ */
 .juez {
   left: 56%;
-  top: 39%;
+  top: 34%;
 }
 
-/* SECRETARIO: junto al hombro del hombre sentado de espaldas */
+/* SECRETARIO */
 .secretario {
   left: 56%;
-  top: 68%;
+  top: 64%;
 }
 
-/* TRES REPRESENTANTES DEL LADO IZQUIERDO */
+/* FISCALÍA LIBERAL */
 .gaitan {
-  left: 13%;
-  top: 53%;
+  left: 15%;
+  top: 44%;
 }
 
 .galan {
-  left: 27%;
-  top: 53%;
+  left: 29%;
+  top: 47%;
 }
 
 .samper {
-  left: 39%;
-  top: 53%;
+  left: 42%;
+  top: 48%;
 }
 
-/* TRES REPRESENTANTES DEL LADO DERECHO */
+/* DEFENSA CONSERVADORA */
 .misael {
-  left: 63%;
-  top: 53%;
+  left: 60%;
+  top: 48%;
 }
 
 .andres {
-  left: 77%;
-  top: 53%;
+  left: 75%;
+  top: 47%;
 }
 
 .belisario {
-  left: 89%;
-  top: 53%;
+  left: 88%;
+  top: 44%;
 }
 
-@keyframes flotar {
-  0%, 100% {
-    margin-top: 0;
-  }
-  50% {
-    margin-top: -4px;
-  }
-}
-
-.leyenda {
-  width: min(1000px, 95%);
-  margin: 20px auto;
-  display: flex;
-  justify-content: space-around;
-  gap: 15px;
-  text-align: center;
-  color: #dfbd7c;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-footer {
-  padding: 18px;
-  text-align: center;
-  background: #080605;
-  color: #d9b66d;
-  border-top: 1px solid #8d6836;
-}
-
-@media (max-width: 650px) {
-  .escenario {
-    width: 100%;
-    border-left: 0;
-    border-right: 0;
-  }
-
+/* ICONOS MÁS PEQUEÑOS EN CELULARES */
+@media (max-width: 600px) {
   .icono {
-    width: 22px;
-    height: 22px;
-    font-size: 11px;
-  }
-
-  .leyenda {
-    font-size: 12px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .icono {
-    animation: none;
+    width: 27px;
+    height: 27px;
   }
 }
