@@ -1,0 +1,87 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+  const musica = document.getElementById("musicaTribunal");
+  const expediente = document.getElementById("sonidoExpediente");
+  const mazo = document.getElementById("sonidoMazo");
+  const boton = document.getElementById("botonMusica");
+
+  // VOLUMENES
+  musica.volume = 0.20;
+  expediente.volume = 0.75;
+  mazo.volume = 0.85;
+
+  // BOTON DE MUSICA
+  boton.addEventListener("click", async () => {
+
+    if (musica.paused) {
+      try {
+        await musica.play();
+        boton.textContent = "🔇 Silenciar música";
+        boton.setAttribute("aria-pressed", "true");
+      } catch (error) {
+        alert("No se pudo reproducir la música. Revisa musica-tribunal.mp3");
+      }
+    } else {
+      musica.pause();
+      boton.textContent = "🔊 Activar música";
+      boton.setAttribute("aria-pressed", "false");
+    }
+
+  });
+
+  // ENLACES DE LOS PERSONAJES
+  const personajes = document.querySelectorAll(
+    ".escenario a.icono"
+  );
+
+  personajes.forEach((personaje) => {
+
+    personaje.addEventListener("click", (evento) => {
+
+      // Mantener los atajos para abrir otras pestañas
+      if (
+        evento.ctrlKey ||
+        evento.metaKey ||
+        evento.shiftKey ||
+        evento.altKey ||
+        evento.button !== 0
+      ) {
+        return;
+      }
+
+      const destino = personaje.href;
+
+      // ELEGIR SONIDO
+      let sonido;
+
+      if (personaje.classList.contains("juez")) {
+        sonido = mazo;
+      } else {
+        sonido = expediente;
+      }
+
+      // EVITAR SALIR ANTES DE ESCUCHARLO
+      evento.preventDefault();
+
+      try {
+        sonido.pause();
+        sonido.currentTime = 0;
+        const reproduccion = sonido.play();
+
+        if (reproduccion && reproduccion.catch) {
+          reproduccion.catch(() => {});
+        }
+      } catch (error) {
+        // Si falla el audio, el enlace sigue funcionando
+      }
+
+      // ABRIR EL EXPEDIENTE
+      setTimeout(() => {
+        window.location.assign(destino);
+      }, 550);
+
+    });
+
+  });
+
+});
