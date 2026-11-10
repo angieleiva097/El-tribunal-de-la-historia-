@@ -1,18 +1,185 @@
-.escena-juzgado {
-  position: relative;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
 
-.escena-juzgado img {
+body {
+  background: #140d09;
+  color: #f4e5c5;
+  font-family: Georgia, serif;
+  overflow-x: hidden;
+}
+
+/* CABECERA */
+.cabecera {
+  text-align: center;
+  padding: 12px 8px;
+  background: #21140e;
+  border-bottom: 2px solid #b18a4d;
+}
+
+.cabecera h1 {
+  margin: 0;
+  color: #dfbd7c;
+  font-size: clamp(18px, 3vw, 32px);
+  letter-spacing: 2px;
+}
+
+/* INSTRUCCIONES */
+.instruccion {
+  text-align: center;
+  padding: 8px;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ESCENARIO DEL JUZGADO */
+.escenario {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* IMAGEN ORIGINAL */
+.fondo-juzgado {
   display: block;
   width: 100%;
   height: auto;
+  margin: 0;
+  padding: 0;
 }
 
-.icono-personaje {
+/* ICONOS INTERACTIVOS */
+.icono {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: clamp(17px, 2.2vw, 28px);
+  height: clamp(17px, 2.2vw, 28px);
+
+  font-size: clamp(11px, 1.5vw, 18px);
+  line-height: 1;
+
+  text-decoration: none;
+  color: #f8d88d;
+
+  background: rgba(30, 18, 10, 0.75);
+  border: 1px solid #d7ae65;
+  border-radius: 50%;
+
   transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
-  z-index: 10;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.icono:hover,
+.icono:focus-visible {
+  background: #d7ae65;
+  color: #21140e;
+  transform: translate(-50%, -50%) scale(1.2);
+  outline: 2px solid #fff0c4;
+}
+
+/* JUEZ */
+.juez {
+  left: 53%;
+  top: 39%;
+}
+
+/* SECRETARIO */
+.secretario {
+  left: 55%;
+  top: 65%;
+}
+
+/* FISCALIA LIBERAL */
+
+/* Gaitan - primer personaje */
+.gaitan {
+  left: 13%;
+  top: 57%;
+}
+
+/* Galan - segundo personaje */
+.galan {
+  left: 25%;
+  top: 55%;
+}
+
+/* Samper - tercer personaje */
+.samper {
+  left: 34%;
+  top: 54%;
+}
+
+/* DEFENSA CONSERVADORA */
+
+/* Misael - primer personaje */
+.misael {
+  left: 77%;
+  top: 50%;
+}
+
+/* Andres - segundo personaje */
+.andres {
+  left: 85%;
+  top: 49%;
+}
+
+/* Belisario - tercer personaje */
+.belisario {
+  left: 93%;
+  top: 49%;
+}
+
+/* LEYENDA */
+.leyenda {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 12px;
+  text-align: center;
+  background: #21140e;
+  color: #dfbd7c;
+  font-size: clamp(11px, 1.5vw, 16px);
+}
+
+/* PIE DE PAGINA */
+footer {
+  text-align: center;
+  padding: 14px;
+  background: #140d09;
+  color: #dfbd7c;
+  font-size: 13px;
+}
+
+footer p {
+  margin: 6px 0 0;
+}
+
+/* PANTALLAS PEQUEÑAS */
+@media (max-width: 600px) {
+  .cabecera {
+    padding: 10px 5px;
+  }
+
+  .instruccion {
+    font-size: 12px;
+  }
+
+  .icono {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
 }
