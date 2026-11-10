@@ -59,33 +59,33 @@ body {
 /* JUEZ: CENTRO */
 .juez {
   left: 54%;
-  top: 31%;
+  top: 42%;
 }
 
 /* SECRETARIO: CENTRO */
 .secretario {
   left: 54%;
-  top: 61%;
+  top: 65%;
 }
 
 /* FISCALIA LIBERAL */
 
 /* Gaitan */
 .gaitan {
-  left: 15%;
-  top: 65%;
+  left: 11.5%;
+  top: 60%;
 }
 
 /* Galan */
 .galan {
   left: 25%;
-  top: 65%;
+  top: 60%;
 }
 
 /* Samper */
 .samper {
   left: 34%;
-  top: 65%;
+  top: 60%;
 }
 
 /* DEFENSA CONSERVADORA */
@@ -93,19 +93,19 @@ body {
 /* Misael Pastrana */
 .misael {
   left: 77%;
-  top: 67%;
+  top: 57%;
 }
 
 /* Andres Pastrana */
 .andres {
   left: 85%;
-  top: 67%;
+  top: 57%;
 }
 
 /* Belisario Betancur */
 .belisario {
   left: 93%;
-  top: 67%;
+  top: 57%;
 }
 
 /* CABECERA */
