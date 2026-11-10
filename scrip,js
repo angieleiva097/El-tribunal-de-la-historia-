@@ -1,45 +1,124 @@
+
 document.addEventListener("DOMContentLoaded", () => {
 
-  const musica = document.getElementById("musicaTribunal");
-  const expediente = document.getElementById("sonidoExpediente");
-  const mazo = document.getElementById("sonidoMazo");
-  const boton = document.getElementById("botonMusica");
+  const musica =
+    document.getElementById("musicaTribunal");
 
-  // VOLUMENES
-  musica.volume = 0.20;
-  expediente.volume = 0.75;
-  mazo.volume = 0.85;
+  const expediente =
+    document.getElementById("sonidoExpediente");
 
-  // BOTON DE MUSICA
-  boton.addEventListener("click", async () => {
+  const mazo =
+    document.getElementById("sonidoMazo");
 
-    if (musica.paused) {
-      try {
-        await musica.play();
-        boton.textContent = "🔇 Silenciar música";
-        boton.setAttribute("aria-pressed", "true");
-      } catch (error) {
-        alert("No se pudo reproducir la música. Revisa musica-tribunal.mp3");
+  const pagina =
+    document.getElementById("sonidoPagina");
+
+  const boton =
+    document.getElementById("botonMusica");
+
+  const parametros =
+    new URLSearchParams(window.location.search);
+
+  const personaje = parametros.get("personaje");
+
+  const esInterior =
+    document.body.classList.contains("pagina-expediente");
+
+  /* MÚSICA SEGÚN LA SECCIÓN */
+
+  if (musica) {
+    if (esInterior) {
+      if (personaje === "biblioteca") {
+        musica.src = "musica-biblioteca.mp3";
+      } else if (personaje === "secretaria") {
+        musica.src = "musica-archivo.mp3";
+      } else {
+        musica.src = "musica-expedientes.mp3";
       }
+    }
+
+    musica.volume = 0.20;
+  }
+
+  if (expediente) expediente.volume = 0.75;
+  if (mazo) mazo.volume = 0.85;
+  if (pagina) pagina.volume = 0.65;
+
+  /* ACTIVAR O SILENCIAR MÚSICA */
+
+  if (boton && musica) {
+    boton.addEventListener("click", async () => {
+
+      if (musica.paused) {
+        try {
+          await musica.play();
+
+          boton.textContent = "🔇 Silenciar música";
+          boton.setAttribute("aria-pressed", "true");
+
+        } catch (error) {
+          alert(
+            "No se pudo reproducir la música. " +
+            "Comprueba que el archivo MP3 exista en GitHub."
+          );
+        }
+
+      } else {
+        musica.pause();
+
+        boton.textContent = "🔊 Activar música";
+        boton.setAttribute("aria-pressed", "false");
+      }
+
+    });
+  }
+
+  /* FUNCIÓN GENERAL PARA EFECTOS */
+
+  function reproducir(audio) {
+    if (!audio) return;
+
+    try {
+      audio.pause();
+      audio.currentTime = 0;
+
+      const promesa = audio.play();
+
+      if (promesa && promesa.catch) {
+        promesa.catch(() => {});
+      }
+    } catch (error) {
+      console.warn("No se pudo reproducir el efecto.");
+    }
+  }
+
+  /* EFECTOS EN LAS PÁGINAS INTERIORES */
+
+  document.addEventListener("efectoTribunal", (evento) => {
+
+    const tipo = evento.detail?.tipo;
+
+    if (tipo === "pagina") {
+      reproducir(pagina || expediente);
+    } else if (tipo === "mazo") {
+      reproducir(mazo);
     } else {
-      musica.pause();
-      boton.textContent = "🔊 Activar música";
-      boton.setAttribute("aria-pressed", "false");
+      reproducir(expediente);
     }
 
   });
 
-  // ENLACES DE LOS PERSONAJES
-  const personajes = document.querySelectorAll(
-    ".escenario a.icono"
-  );
+  /* ICONOS DE LA SALA PRINCIPAL */
 
-  personajes.forEach((personaje) => {
+  const personajes =
+    document.querySelectorAll(".escenario a.icono");
 
-    personaje.addEventListener("click", (evento) => {
+  personajes.forEach((enlace) => {
 
-      // Mantener los atajos para abrir otras pestañas
+    enlace.addEventListener("click", (evento) => {
+
       if (
+        evento.defaultPrevented ||
         evento.ctrlKey ||
         evento.metaKey ||
         evento.shiftKey ||
@@ -49,33 +128,16 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const destino = personaje.href;
-
-      // ELEGIR SONIDO
-      let sonido;
-
-      if (personaje.classList.contains("juez")) {
-        sonido = mazo;
-      } else {
-        sonido = expediente;
-      }
-
-      // EVITAR SALIR ANTES DE ESCUCHARLO
       evento.preventDefault();
 
-      try {
-        sonido.pause();
-        sonido.currentTime = 0;
-        const reproduccion = sonido.play();
+      const destino = enlace.href;
 
-        if (reproduccion && reproduccion.catch) {
-          reproduccion.catch(() => {});
-        }
-      } catch (error) {
-        // Si falla el audio, el enlace sigue funcionando
+      if (enlace.classList.contains("juez")) {
+        reproducir(mazo);
+      } else {
+        reproducir(expediente);
       }
 
-      // ABRIR EL EXPEDIENTE
       setTimeout(() => {
         window.location.assign(destino);
       }, 550);
