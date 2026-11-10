@@ -1,96 +1,142 @@
-const expedientes = [
-  {
-    id: "gaitan",
+const expedientes = {
+  biblioteca: {
+    nombre: "Biblioteca histórica",
+    subtitulo: "Centro de documentación del tribunal",
+    descripcion: "Este espacio reúne fuentes para investigar la historia política colombiana: libros, documentos, discursos, archivos y testimonios.",
+    secciones: [
+      "Historia política de Colombia",
+      "Libros y referencias bibliográficas",
+      "Documentos históricos",
+      "Discursos y fuentes de consulta"
+    ]
+  },
+
+  secretaria: {
+    nombre: "Secretaría del tribunal",
+    subtitulo: "Organización de los expedientes",
+    descripcion: "Desde aquí se organiza el archivo histórico y se facilita la consulta de los documentos de cada personaje.",
+    secciones: [
+      "Registro de expedientes",
+      "Índice de personajes",
+      "Clasificación documental",
+      "Guía de consulta"
+    ]
+  },
+
+  gaitan: {
     nombre: "Jorge Eliécer Gaitán",
-    corriente: "Liberal",
-    descripcion: "Consulta documentos sobre su trayectoria política, sus discursos y su influencia en la historia colombiana."
+    subtitulo: "Expediente histórico",
+    descripcion: "Investiga su trayectoria política, sus discursos, su pensamiento y su influencia en la historia colombiana.",
+    secciones: [
+      "Biografía y trayectoria",
+      "Pensamiento político",
+      "Discursos y documentos",
+      "Libros y bibliografía",
+      "Controversias históricas"
+    ]
   },
-  {
-    id: "galan",
+
+  galan: {
     nombre: "Luis Carlos Galán",
-    corriente: "Liberal",
-    descripcion: "Consulta información sobre su proyecto político, sus discursos y la lucha contra el narcotráfico."
+    subtitulo: "Expediente histórico",
+    descripcion: "Consulta su trayectoria, sus propuestas políticas, sus discursos y su lucha contra el narcotráfico.",
+    secciones: [
+      "Biografía y trayectoria",
+      "Proyecto político",
+      "Discursos y documentos",
+      "Libros y bibliografía",
+      "Controversias históricas"
+    ]
   },
-  {
-    id: "samper",
+
+  samper: {
     nombre: "Ernesto Samper",
-    corriente: "Liberal",
-    descripcion: "Investiga su gobierno, el proceso 8.000 y las controversias de su administración."
+    subtitulo: "Expediente histórico",
+    descripcion: "Examina su presidencia, el proceso 8.000 y las controversias políticas de su administración.",
+    secciones: [
+      "Biografía y trayectoria",
+      "Gobierno 1994-1998",
+      "Proceso 8.000",
+      "Libros y documentos",
+      "Controversias históricas"
+    ]
   },
-  {
-    id: "misael",
+
+  misael: {
     nombre: "Misael Pastrana",
-    corriente: "Conservadora",
-    descripcion: "Explora su trayectoria política, su gobierno y el contexto histórico de su presidencia."
+    subtitulo: "Expediente histórico",
+    descripcion: "Investiga su trayectoria política, su presidencia y el contexto histórico de su gobierno.",
+    secciones: [
+      "Biografía y trayectoria",
+      "Gobierno 1970-1974",
+      "Decisiones políticas",
+      "Libros y documentos",
+      "Controversias históricas"
+    ]
   },
-  {
-    id: "andres",
+
+  andres: {
     nombre: "Andrés Pastrana",
-    corriente: "Conservadora",
-    descripcion: "Consulta información sobre su gobierno, el proceso de paz y el contexto del conflicto colombiano."
+    subtitulo: "Expediente histórico",
+    descripcion: "Consulta su gobierno, el proceso de paz del Caguán y el contexto del conflicto colombiano.",
+    secciones: [
+      "Biografía y trayectoria",
+      "Gobierno 1998-2002",
+      "Proceso de paz del Caguán",
+      "Libros y documentos",
+      "Controversias históricas"
+    ]
   },
-  {
-    id: "belisario",
+
+  belisario: {
     nombre: "Belisario Betancur",
-    corriente: "Conservadora",
-    descripcion: "Investiga sus políticas, los diálogos de paz y los acontecimientos de su gobierno."
+    subtitulo: "Expediente histórico",
+    descripcion: "Examina su presidencia, sus iniciativas de paz y los acontecimientos de su gobierno.",
+    secciones: [
+      "Biografía y trayectoria",
+      "Gobierno 1982-1986",
+      "Procesos de paz",
+      "Libros y documentos",
+      "Controversias históricas"
+    ]
   }
-];
+};
 
-const botones = document.querySelectorAll(".personaje");
-const contenido = document.getElementById("contenidoArchivos");
-const mensaje = document.getElementById("mensaje");
+const contenedor = document.getElementById("detalleExpediente");
 
-function mostrarExpedientes(personaje) {
-  contenido.innerHTML = "";
+if (contenedor) {
+  const parametros = new URLSearchParams(window.location.search);
+  const id = parametros.get("personaje");
+  const expediente = expedientes[id];
 
-  let seleccionados;
-
-  if (personaje === "todos") {
-    seleccionados = expedientes;
-    mensaje.textContent = "Biblioteca histórica: todos los expedientes.";
-  } else {
-    seleccionados = expedientes.filter(
-      expediente => expediente.id === personaje
-    );
-
-    mensaje.textContent = "Expediente seleccionado:";
-  }
-
-  seleccionados.forEach(expediente => {
-    const tarjeta = document.createElement("article");
-    tarjeta.className = "expediente";
-
-    const titulo = document.createElement("h3");
+  if (expediente) {
+    const titulo = document.createElement("h1");
     titulo.textContent = expediente.nombre;
 
-    const corriente = document.createElement("p");
-    corriente.textContent = "Corriente política: " + expediente.corriente;
+    const subtitulo = document.createElement("h2");
+    subtitulo.textContent = expediente.subtitulo;
 
     const descripcion = document.createElement("p");
     descripcion.textContent = expediente.descripcion;
 
-    const boton = document.createElement("button");
-    boton.textContent = "Consultar expediente";
-    boton.addEventListener("click", () => {
-      alert(
-        "Expediente de " + expediente.nombre +
-        "\n\n" + expediente.descripcion +
-        "\n\nPróximamente encontrarás aquí sus libros y documentos históricos."
-      );
+    const documentos = document.createElement("div");
+    documentos.className = "seccion-documentos";
+
+    const encabezado = document.createElement("h2");
+    encabezado.textContent = "Contenido del expediente";
+
+    documentos.appendChild(encabezado);
+
+    expediente.secciones.forEach(seccion => {
+      const elemento = document.createElement("p");
+      elemento.textContent = "📜 " + seccion;
+      documentos.appendChild(elemento);
     });
 
-    tarjeta.append(titulo, corriente, descripcion, boton);
-    contenido.appendChild(tarjeta);
-  });
+    contenedor.append(titulo, subtitulo, descripcion, documentos);
+  } else {
+    const error = document.createElement("h1");
+    error.textContent = "Expediente no encontrado";
+    contenedor.appendChild(error);
+  }
 }
-
-botones.forEach(boton => {
-  boton.addEventListener("click", () => {
-    const personaje = boton.dataset.role;
-    mostrarExpedientes(personaje);
-    document.getElementById("archivos").scrollIntoView({
-      behavior: "smooth"
-    });
-  });
-});
