@@ -4,90 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Tribunal de la Historia</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
+
 <body>
 
   <header class="cabecera">
     <h1>EL TRIBUNAL DE LA HISTORIA</h1>
-    <p>Un recorrido por la memoria política colombiana</p>
+    <p>Investigar · Cuestionar · Comprender</p>
   </header>
 
   <main>
-    <section class="introduccion">
-      <p>Bienvenido al tribunal. Selecciona un personaje o consulta la biblioteca histórica.</p>
+    <section class="bienvenida">
+      <h2>Bienvenido al recinto histórico</h2>
+      <p>
+        En este tribunal no se juzgan personas:
+        se examinan decisiones, documentos,
+        discursos y acontecimientos de la historia política colombiana.
+      </p>
+      <p>Selecciona un icono para consultar los archivos históricos.</p>
     </section>
 
-    <section class="escenario" aria-label="Sala del Tribunal de la Historia">
+    <section class="escenario">
 
-      <img class="fondo-juzgado"
-           src="Juzgado.jpeg"
-           alt="Sala ilustrada de El Tribunal de la Historia">
+      <img
+        class="fondo-juzgado"
+        src="Juzgado.jpeg"
+        alt="Ilustración de la sala de El Tribunal de la Historia"
+      >
 
+      <!-- ACCESO AL JUEZ -->
       <a class="punto juez"
          href="expediente.html?personaje=biblioteca"
-         aria-label="Abrir biblioteca histórica"
+         aria-label="Consultar biblioteca histórica"
          title="Biblioteca histórica">
         <span>⚖</span>
         <small>Biblioteca</small>
       </a>
 
+      <!-- ACCESO AL SECRETARIO -->
       <a class="punto secretario"
          href="expediente.html?personaje=secretaria"
-         aria-label="Abrir secretaría"
+         aria-label="Consultar secretaría"
          title="Secretaría">
         <span>📜</span>
         <small>Secretaría</small>
       </a>
 
+      <!-- FISCALÍA: TRES EXPEDIENTES -->
       <a class="punto personaje p-gaitan"
          href="expediente.html?personaje=gaitan"
-         title="Jorge Eliécer Gaitán">
-        <span>📁</span><small>Gaitán</small>
+         title="Jorge Eliécer Gaitán"
+         aria-label="Expediente de Jorge Eliécer Gaitán">
+        <span>📁</span>
+        <small>Gaitán</small>
       </a>
 
       <a class="punto personaje p-galan"
          href="expediente.html?personaje=galan"
-         title="Luis Carlos Galán">
-        <span>📁</span><small>Galán</small>
+         title="Luis Carlos Galán"
+         aria-label="Expediente de Luis Carlos Galán">
+        <span>📁</span>
+        <small>Galán</small>
       </a>
 
       <a class="punto personaje p-samper"
          href="expediente.html?personaje=samper"
-         title="Ernesto Samper">
-        <span>📁</span><small>Samper</small>
+         title="Ernesto Samper"
+         aria-label="Expediente de Ernesto Samper">
+        <span>📁</span>
+        <small>Samper</small>
       </a>
 
+      <!-- DEFENSA: TRES EXPEDIENTES -->
       <a class="punto personaje p-misael"
          href="expediente.html?personaje=misael"
-         title="Misael Pastrana">
-        <span>📁</span><small>M. Pastrana</small>
+         title="Misael Pastrana"
+         aria-label="Expediente de Misael Pastrana">
+        <span>📁</span>
+        <small>M. Pastrana</small>
       </a>
 
       <a class="punto personaje p-andres"
          href="expediente.html?personaje=andres"
-         title="Andrés Pastrana">
-        <span>📁</span><small>A. Pastrana</small>
+         title="Andrés Pastrana"
+         aria-label="Expediente de Andrés Pastrana">
+        <span>📁</span>
+        <small>A. Pastrana</small>
       </a>
 
       <a class="punto personaje p-belisario"
          href="expediente.html?personaje=belisario"
-         title="Belisario Betancur">
-        <span>📁</span><small>Betancur</small>
+         title="Belisario Betancur"
+         aria-label="Expediente de Belisario Betancur">
+        <span>📁</span>
+        <small>Betancur</small>
       </a>
 
     </section>
 
-    <section class="instrucciones">
-      <h2>¿Cómo recorrer el tribunal?</h2>
-      <p>Selecciona los iconos dorados para entrar a la biblioteca, consultar la secretaría o abrir los expedientes históricos.</p>
+    <section class="ayuda">
+      <p>
+        Cada icono abre un espacio independiente de consulta.
+        Explora los expedientes y conoce las fuentes históricas.
+      </p>
     </section>
+
   </main>
 
   <footer>
-    EL TRIBUNAL DE LA HISTORIA · Memoria, investigación y pensamiento crítico
+    EL TRIBUNAL DE LA HISTORIA
+    <span>Memoria · Investigación · Historia política colombiana</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
+
 </body>
 </html>
