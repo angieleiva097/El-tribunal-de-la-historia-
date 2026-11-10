@@ -1,31 +1,59 @@
+/*LOS ICONOS SE UBICAN SOBRE EL JUZGADO */
+.escenario {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fondo-juzgado {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* TAMAÑO DE LOS ICONOS */
+.escenario .icono {
+  position: absolute;
+  z-index: 30;
+  width: 25px;
+  height: 25px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
 /* FISCALÍA LIBERAL */
-.gaitan {
+.escenario .gaitan {
   left: 13%;
   top: 78%;
 }
 
-.galan {
+.escenario .galan {
   left: 25%;
   top: 78%;
 }
 
-.samper {
+.escenario .samper {
   left: 34%;
   top: 78%;
 }
 
 /* DEFENSA CONSERVADORA */
-.misael {
+.escenario .misael {
   left: 70%;
   top: 78%;
 }
 
-.andres {
+.escenario .andres {
   left: 79%;
   top: 78%;
 }
 
-.belisario {
+.escenario .belisario {
   left: 88%;
   top: 78%;
 }
