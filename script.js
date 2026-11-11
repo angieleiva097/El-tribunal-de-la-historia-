@@ -198,9 +198,75 @@ const expedientes = {
       {
         titulo: "Biografía y trayectoria",
         hojas: [
-          "Belisario Betancur Cuartas nació en Amagá, Antioquia, en 1923. Fue abogado, escritor y dirigente del Partido Conservador.",
-          "Ejerció la presidencia de Colombia entre 1982 y 1986."
-        ]
+{
+  titulo: "Biografía y trayectoria",
+  hojas: [
+    `EXPEDIENTE HISTÓRICO N.º 006-BB
+
+    IDENTIFICACIÓN DEL PERSONAJE
+
+    Nombre completo: Belisario Betancur Cuartas.
+    Nacimiento: 4 de febrero de 1923.
+    Lugar: Amagá, Antioquia, Colombia.
+    Fallecimiento: 7 de diciembre de 2018.
+    Filiación política: Partido Conservador Colombiano.
+    Cargo principal: Presidente de la República de Colombia, período 1982-1986.
+
+    OBJETO DEL EXPEDIENTE
+
+    Examinar la trayectoria personal, académica y política de Belisario Betancur, identificando los acontecimientos que marcaron su participación en la vida pública nacional.
+
+    El presente documento es una reconstrucción histórica con formato judicial simulado. No constituye una investigación penal ni una declaración de responsabilidad.`,
+
+    `FOLIO II — ANTECEDENTES PERSONALES Y FORMACIÓN
+
+    Belisario Betancur nació en el municipio de Amagá, Antioquia, en el seno de una familia de recursos económicos modestos.
+
+    Su trayectoria educativa estuvo vinculada a instituciones religiosas y a la formación humanística. Estudió Derecho en la Universidad Pontificia Bolivariana, donde desarrolló intereses relacionados con la literatura, la filosofía y la política.
+
+    Su origen social y su formación intelectual se convirtieron en elementos relevantes de su imagen pública. Además de su actividad política, Betancur desarrolló una trayectoria como escritor y promotor de iniciativas culturales.
+
+    Estos antecedentes permiten comprender la construcción de su identidad política y su posterior participación en la vida institucional colombiana.`,
+
+    `FOLIO III — TRAYECTORIA POLÍTICA
+
+    Betancur se vinculó al Partido Conservador y desarrolló una extensa carrera pública antes de llegar a la Presidencia de la República.
+
+    Fue congresista, ministro de Trabajo y embajador de Colombia en España, entre otras responsabilidades.
+
+    Participó en distintas campañas presidenciales y fue candidato conservador en las elecciones de 1970 y 1978, antes de obtener la victoria electoral en 1982.
+
+    Su trayectoria se desarrolló en un período marcado por las transformaciones posteriores al Frente Nacional, la persistencia de la violencia política y los debates sobre la apertura democrática.`,
+
+    `FOLIO IV — ACCESO A LA PRESIDENCIA
+
+    En las elecciones presidenciales de 1982, Belisario Betancur fue elegido presidente de Colombia.
+
+    Su llegada al poder ocurrió en un contexto de conflicto armado interno, tensiones sociales y demandas de transformación institucional.
+
+    Uno de los ejes más destacados de su gobierno fue la búsqueda de una salida negociada al conflicto con organizaciones insurgentes.
+
+    Durante su administración se promovieron iniciativas de diálogo y acuerdos de cese al fuego. Sin embargo, el período también estuvo marcado por acontecimientos de gran gravedad, entre ellos la toma y retoma del Palacio de Justicia en noviembre de 1985.
+
+    Estos hechos serán examinados en carpetas documentales independientes, para distinguir la trayectoria biográfica del análisis de las decisiones gubernamentales.`,
+
+    `FOLIO V — CONSIDERACIONES DEL TRIBUNAL
+
+    Del examen preliminar de su trayectoria se identifican tres dimensiones fundamentales:
+
+    PRIMERA: Su ascenso político dentro del Partido Conservador y su participación en diferentes instituciones del Estado.
+
+    SEGUNDA: Su interés por la cultura, la educación y el diálogo político.
+
+    TERCERA: Su papel como presidente durante un período caracterizado por iniciativas de paz y profundas crisis nacionales.
+
+    El Tribunal de la Historia dispone continuar el estudio de este personaje mediante la revisión de documentos históricos, investigaciones académicas y testimonios disponibles.
+
+    ESTADO DEL EXPEDIENTE: ABIERTO PARA CONSULTA HISTÓRICA.
+
+    NOTA: Las consideraciones aquí presentadas son educativas y no equivalen a decisiones de un tribunal judicial real.`
+  ]
+
       },
       {
         titulo: "Gobierno 1982-1986",
