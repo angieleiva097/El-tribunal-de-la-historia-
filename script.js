@@ -234,7 +234,30 @@ const expedientes = {
   Agrega aquí únicamente enlaces comprobados.
   No se mostrarán botones de PDF sin URL.
 */
+
 const fuentes = {
+  biblioteca: {
+    historia: "",
+    documento: "",
+    discursoLiberal: "",
+    discursoConservador: ""
+  },
+
+  gaitan: {},
+  galan: {},
+
+  samper: {
+    2: "https://www.comisiondelaverdad.co/proceso-8000"
+  },
+
+  misael: {},
+  andres: {},
+
+  belisario: {
+    1: "https://centrodememoriahistorica.gov.co/descargas/28-anos-palacio-justicia/comision-verdad-palacio-justicia.pdf"
+  }
+};
+
   biblioteca: {
     historia: "",
     documento: "",
@@ -382,7 +405,7 @@ function abrirHojas(titulo, hojas, enlacePDF = "") {
 
     if (enlacePDF && pagina === hojas.length - 1) {
       papel.appendChild(
-        crearEnlace("📄 Consultar PDF original", enlacePDF)
+        crearEnlace("📄 Consultar fuente histórica", enlacePDF)
       );
     }
 
