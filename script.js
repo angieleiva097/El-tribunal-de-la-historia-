@@ -235,8 +235,9 @@ const expedientes = {
   No se mostrarán botones de PDF sin URL.
 */
 
+
 const fuentes = {
- biblioteca: {
+  biblioteca: {
     historia: "",
     documento: "",
     discursoLiberal: "",
@@ -256,21 +257,6 @@ const fuentes = {
   belisario: {
     1: "https://centrodememoriahistorica.gov.co/descargas/28-anos-palacio-justicia/comision-verdad-palacio-justicia.pdf"
   }
-};
-
-  biblioteca: {
-    historia: "",
-    documento: "",
-    discursoLiberal: "",
-    discursoConservador: ""
-  },
-
-  gaitan: {},
-  galan: {},
-  samper: {},
-  misael: {},
-  andres: {},
-  belisario: {}
 };
 
 const contenedor =
