@@ -517,8 +517,7 @@ function mostrarPolitico(personaje, clave) {
   };
 
   contenedor.appendChild(fotografia);
-
-  );
+   
 
   contenedor.appendChild(
     crearElemento(
