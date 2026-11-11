@@ -1113,7 +1113,7 @@ function mostrarPolitico(personaje, clave) {
 
   const fotografia = document.createElement("img");
 
-  fotografia.src = "imagenes/" + encodeURIComponent(fotos[clave]);
+  fotografia.src = "./imagenes/" + encodeURIComponent(fotos[clave]);
   fotografia.alt = `Fotografía histórica de ${personaje.nombre}`;
   fotografia.className = "foto-expediente";
 
