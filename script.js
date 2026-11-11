@@ -835,28 +835,39 @@ Se podrá incorporar el documento Los embates por la paz una vez comprobados sus
    ========================================== */
 
 const fuentes = {
-  biblioteca: {
+   biblioteca: {
     historia: "",
     documento: "",
-    discursoLiberal: "",
-    discursoConservador: ""
+    discursoLiberal: "https://www.youtube.com/watch?v=783nx4AXQCI",
+    discursoConservador: "https://www.youtube.com/watch?v=5RfIAa-RDZM"
   },
 
-  gaitan: {},
-  galan: {},
+  gaitan: {
+    3: "https://derecho.bogota.unal.edu.co/fileadmin/publicaciones/Digital_Gratuita/El_profesor_Jorge_Eliecer_Gaitan_en_las_aulas_de_la_universidad_liberal_-_Herrera_y_Garcia.pdf"
+  },
+
+  galan: {
+    3: "https://bibliotecadigital.usb.edu.co/server/api/core/bitstreams/ba049934-d9a3-45ba-bda2-07f5ce0da74d/content"
+  },
 
   samper: {
-    2: "https://www.comisiondelaverdad.co/proceso-8000"
+    2: "https://www.comisiondelaverdad.co/proceso-8000",
+    3: "http://www.mamacoca.org/docs_de_base/La_Representacion_Social_del_narcotrafico/SamperErnesto_Aqui_Estoy_y_Aqui_Me_Quedo_AncoraEds_2000.pdf"
   },
 
-  misael: {},
-  andres: {},
+  misael: {
+    3: "https://colaboracion.dnp.gov.co/cdt/pnd/pastrana1_prologo.pdf"
+  },
+
+  andres: {
+    3: "http://www.mamacoca.org/docs_de_base/La_Representacion_Social_del_narcotrafico/Andres_Pastrana_Memorias_olvidadas_episodios_personales%20_Debate_noviembre2013.pdf"
+  },
 
   belisario: {
-    1: "https://centrodememoriahistorica.gov.co/descargas/28-anos-palacio-justicia/comision-verdad-palacio-justicia.pdf"
+    1: "https://centrodememoriahistorica.gov.co/descargas/28-anos-palacio-justicia/comision-verdad-palacio-justicia.pdf",
+    3: "https://api.pageplace.de/preview/DT0400.9789587747584_A38542963/preview-9789587747584_A38542963.pdf"
   }
 };
-
 /* ==========================================
    FOTOGRAFÍAS SUBIDAS A GITHUB
    ========================================== */
