@@ -236,7 +236,11 @@ const expedientes = {
 */
 
 const fuentes = {
- 
+ biblioteca: {
+    historia: "",
+    documento: "",
+    discursoLiberal: "",
+    discursoConservador: ""
   },
 
   gaitan: {},
