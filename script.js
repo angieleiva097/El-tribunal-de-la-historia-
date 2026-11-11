@@ -266,8 +266,7 @@ const expedientes = {
 
     NOTA: Las consideraciones aquí presentadas son educativas y no equivalen a decisiones de un tribunal judicial real.`
   ]
-
-      },
+ },
       {
         titulo: "Gobierno 1982-1986",
         hojas: [
