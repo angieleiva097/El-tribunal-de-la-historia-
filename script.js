@@ -1113,7 +1113,9 @@ function mostrarPolitico(personaje, clave) {
 
   const fotografia = document.createElement("img");
 
-  fotografia.src = "./imagenes/" + encodeURIComponent(fotos[clave]);
+  fotografia.src = clave === "misael"
+  ? "https://raw.githubusercontent.com/angieleiva097/El-tribunal-de-la-historia-/main/imagenes/Misael_P_Borrero.jpg"
+  : "imagenes/" + encodeURIComponent(fotos[clave]);
   fotografia.alt = `Fotografía histórica de ${personaje.nombre}`;
   fotografia.className = "foto-expediente";
 
