@@ -508,7 +508,18 @@ function mostrarPolitico(personaje, clave) {
   // FOTOGRAFÍA DEL PERSONAJE
   const fotografia = document.createElement("img");
 
-  fotografia.src = `imagenes/${clave}.jpg`;
+  
+  const fotos = {
+    gaitan: "Jorge Eliécer Gaitán.jpg",
+    galan: "Carlos Galán.jpg",
+    samper: "ErnestoSamper.webp",
+    misael: "Misael_P_Borrero.jpg",
+    andres: "Andres Pastrana.jpg",
+    belisario: "Belisario Betancur.webp"
+  };
+
+  fotografia.src = "imagenes/" + encodeURIComponent(fotos[clave]);
+
   fotografia.alt = `Fotografía histórica de ${personaje.nombre}`;
   fotografia.className = "foto-expediente";
 
