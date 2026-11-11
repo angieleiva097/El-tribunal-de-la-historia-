@@ -524,8 +524,9 @@ function mostrarPolitico(personaje, clave) {
   fotografia.className = "foto-expediente";
 
   fotografia.onerror = function () {
-    this.style.display = "none";
-  };
+  console.error("Error al cargar la fotografía:", this.src);
+  this.alt = "No se pudo cargar la fotografía";
+};
 
   contenedor.appendChild(fotografia);
    
