@@ -503,6 +503,20 @@ function mostrarPolitico(personaje, clave) {
       personaje.descripcion,
       "📜"
     )
+     
+  // FOTOGRAFÍA DEL PERSONAJE
+  const fotografia = document.createElement("img");
+
+  fotografia.src = `imagenes/${clave}.jpg`;
+  fotografia.alt = `Fotografía histórica de ${personaje.nombre}`;
+  fotografia.className = "foto-expediente";
+
+  fotografia.onerror = function () {
+    this.style.display = "none";
+  };
+
+  contenedor.appendChild(fotografia);
+
   );
 
   contenedor.appendChild(
