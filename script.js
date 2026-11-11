@@ -502,7 +502,8 @@ function mostrarPolitico(personaje, clave) {
       personaje.subtitulo,
       personaje.descripcion,
       "📜"
-    )
+       )
+    );
      
   // FOTOGRAFÍA DEL PERSONAJE
   const fotografia = document.createElement("img");
